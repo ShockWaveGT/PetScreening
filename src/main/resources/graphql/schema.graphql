@@ -1,0 +1,17 @@
+﻿type Breed{
+    id: ID!
+    name: String!
+}
+
+type Pet{
+    id: ID!
+    name: String!
+    weight: Float!
+    vaccinated: Boolean!
+    trainingLevel: Int!
+    breed: Breed!
+}
+
+type Mutation{
+    addPet(name: String! ,weight: Float! ,breedId: Int! ,vaccinated: Boolean! ,trainingLevel: Int!): Pet!
+}
