@@ -45,6 +45,7 @@ First of all run "PetScreeningApplication" and on your browser write http://loca
 ### GraphQL Queries
 
 ### 1- Add a new Pet
+For example:
 
 ```yaml
 mutation AddPet {
@@ -65,6 +66,7 @@ mutation AddPet {
 ```
 
 ### 2- Get Pet weight less than X value
+For example:
 
 ```yaml
 query WeightLessThan {
@@ -78,6 +80,7 @@ query WeightLessThan {
 }
 ```
 ### 3- Filter for not a Poodle
+For example:
 
 ```yaml
 query IsNotAPoodle {
@@ -92,6 +95,7 @@ query IsNotAPoodle {
 ```
 
 ### 4- Filter if its Vaccinated
+For example:
 
 ```yaml
 query IsVaccinated {
