@@ -4,17 +4,20 @@ import com.example.petscreening.pet.entity.Breed;
 import com.example.petscreening.pet.entity.Pet;
 import com.example.petscreening.pet.repository.BreedRepository;
 import com.example.petscreening.pet.repository.PetRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 
-@RestController
+@Controller
 public class PetMutationResolver {
     
+    @Autowired
     private PetRepository petRepository;
+    @Autowired
     private BreedRepository breedRepository;
 
     @MutationMapping
@@ -28,4 +31,5 @@ public class PetMutationResolver {
         pet.setVaccinationStatus(vaccinated);
         return petRepository.save(pet);
     }
+    
 }
