@@ -23,10 +23,9 @@ git clone https://github.com/ShockWaveGT/PetScreening.git
 cd PetScreening
 ```
 
-or
+or on GitHub DeskTop
 
 ```yaml
-on GitHub DeskTop 
 File->Clone Repository->URL-> https://github.com/ShockWaveGT/PetScreening.git
 and choose path with an empty folder
 ```
@@ -43,7 +42,7 @@ Install PostgreSQL database and update the configuration in following the next s
 
 First of all run "PetScreeningApplication" and on your browser write http://localhost:8080/graphiql?path=/graphql
 
-###GraphQL Queries
+### GraphQL Queries
 
 ### 1- Add a new Pet
 
