@@ -5,26 +5,27 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "\"Pet\"")
+@Table(name = "\"pet\"", schema = "public")
 public class Pet {
     @Id
-    @Column(name = "\"ID\"", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "\"id\"", nullable = false)
     private Long id;
 
-    @Column(name = "\"Name\"", nullable = false, length = 50)
+    @Column(name = "\"name\"", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "\"Weight\"", nullable = false)
+    @Column(name = "\"weight\"", nullable = false)
     private BigDecimal weight;
 
-    @Column(name = "\"VaccinationStatus\"", nullable = false)
+    @Column(name = "\"vaccination_status\"", nullable = false)
     private Boolean vaccinationStatus = false;
 
-    @Column(name = "\"TrainingLevel\"", nullable = false)
+    @Column(name = "\"training_level\"", nullable = false)
     private Integer trainingLevel;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "\"BreedID\"")
+    @JoinColumn(name = "\"breed_id\"")
     private Breed breedID;
 
     public Long getId() {

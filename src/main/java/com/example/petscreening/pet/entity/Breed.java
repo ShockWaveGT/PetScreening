@@ -6,13 +6,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "\"Breed\"")
+@Table(name = "\"breed\"")
 public class Breed {
     @Id
-    @Column(name = "\"ID\"", nullable = false)
+    @Column(name = "\"id\"", nullable = false)
     private Long id;
 
-    @Column(name = "\"Name\"", length = 50)
+    @Column(name = "\"name\"", length = 50)
     private String name;
 
     public Long getId() {
