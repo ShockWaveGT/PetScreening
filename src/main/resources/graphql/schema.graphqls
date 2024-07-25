@@ -10,6 +10,7 @@ type Pet{
     vaccinationStatus: Boolean!
     trainingLevel: Int!
     breedID: Breed!
+    breed: Breed!
 }
 
 type Mutation{
@@ -18,4 +19,7 @@ type Mutation{
 
 type Query{
     weightLessThan(weight: Float!): [Pet]
+    isVaccinated: [Pet]
+    isNotAPoodle: [Pet]
+    trainingLevelGreaterThan(trainingLevel: Float!): [Pet]
 }
