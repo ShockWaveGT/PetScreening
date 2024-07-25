@@ -7,11 +7,15 @@ type Pet{
     id: ID!
     name: String!
     weight: Float!
-    vaccinated: Boolean!
+    vaccinationStatus: Boolean!
     trainingLevel: Int!
-    breed: Breed!
+    breedID: Breed!
 }
 
 type Mutation{
     addPet(name: String! ,weight: Float! ,breedId: Int! ,vaccinated: Boolean! ,trainingLevel: Int!): Pet!
+}
+
+type Query{
+    weightLessThan(weight: Float!): [Pet]
 }
